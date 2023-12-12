@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.SeeReviewController">
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #f8f4f4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="157.0" layoutX="231.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/UVALogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="334.0" prefWidth="604.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="courseName" layoutX="278.0" layoutY="19.0" promptText="Enter course" style="-fx-border-color: #d2cee0;">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font></TextField>
+            <Label layoutX="28.0" layoutY="22.0" text="Enter the course name (e.g. CS 3140): " textFill="#05004a">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font></Label>
+            <Button fx:id="checkReviewsButton" layoutX="444.0" layoutY="19.0" mnemonicParsing="false" onAction="#checkReviews" style="-fx-background-color: black;" text="Check Reviews" textFill="#e9e8f4">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="mainMenuButton" layoutX="28.0" layoutY="281.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="32.0" prefWidth="165.0" style="-fx-background-color: #201865;" text="Return to Main Menu" textFill="#e9e8f4">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorMessage" layoutX="28.0" layoutY="44.0" prefHeight="18.0" prefWidth="531.0" textFill="RED">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="243.0" text="Course Average Rating: " textFill="#05004a">
+               <font>
+                  <Font name="Roboto Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="averageRatingLabel" layoutX="170.0" layoutY="243.0">
+               <font>
+                  <Font name="Roboto Bold" size="13.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vBox" layoutX="28.0" layoutY="68.0" prefHeight="167.0" prefWidth="537.0" style="-fx-border-color: #6e679e;">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

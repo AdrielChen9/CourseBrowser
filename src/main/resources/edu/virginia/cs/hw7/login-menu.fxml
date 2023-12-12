@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<!--Resources:
+    https://stackoverflow.com/questions/25919763/javafx-scene-builder-2-0-how-to-add-an-image-to-a-label#:~:text=Inside%20Scene%20Builder%2C%20drag%20an,the%20Scene%20Builder%20properties%20pane.
+
+-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.LoginController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="288.0" style="-fx-background-color: #f8f4f4;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../img/cavlogo.png" />
+                    </image></ImageView>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../img/UVALogo.png" />
+                    </image></ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="318.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="29.0" layoutY="106.0" text="Username" textFill="#6e679e">
+                    <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="29.0" layoutY="178.0" text="Password" textFill="#6e679e">
+                    <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="29.0" layoutY="54.0" prefHeight="35.0" prefWidth="254.0" text="Log In" textFill="#05004a">
+                    <font>
+                        <Font name="Roboto Bold" size="25.0" />
+                    </font></Label>
+                <TextField fx:id="username" focusTraversable="false" layoutX="29.0" layoutY="128.0" prefHeight="35.0" prefWidth="252.0" promptText="Enter username" style="-fx-border-color: #d2cee0;">
+                    <font>
+                        <Font name="Roboto" size="12.0" />
+                    </font></TextField>
+                <Button fx:id="signInButton" layoutX="29.0" layoutY="274.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="40.0" prefWidth="252.0" style="-fx-background-color: #201865;" text="SIGN IN" textFill="#e9e8f4">
+                    <font>
+                        <Font name="Roboto Bold" size="12.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+                <Label fx:id="errorLogin" layoutX="29.0" layoutY="244.0" prefHeight="21.0" prefWidth="251.0" textFill="RED">
+                    <font>
+                        <Font name="Roboto" size="12.0" />
+                    </font>
+                </Label>
+            <PasswordField fx:id="password" layoutX="29.0" layoutY="200.0" prefHeight="35.0" prefWidth="252.0" promptText="Password" style="-fx-border-color: #d2cee0;">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </PasswordField>
+            <Line endX="279.20001220703125" endY="338.8999938964844" startX="31.20001220703125" startY="338.8999938964844" stroke="#d2cee0" />
+            <Button fx:id="createNewUserButton" layoutX="109.0" layoutY="347.0" mnemonicParsing="false" onAction="#registerUser" style="-fx-background-color: white;" text="Create a new user" textFill="#807ba1">
+               <font>
+                  <Font name="Roboto Bold" size="10.0" />
+               </font></Button>
+            </children></AnchorPane>
+    </right>
+</BorderPane>

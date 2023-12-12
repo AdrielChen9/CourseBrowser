@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.hw7.MainMenuController">
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #f8f4f4;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="157.0" layoutX="231.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/UVALogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="334.0" prefWidth="605.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="50.0" layoutY="7.0" prefHeight="40.0" prefWidth="500.0" text="Welcome to the Course Review Application!" textFill="#05004a">
+               <font>
+                  <Font name="Roboto Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Button fx:id="logout" layoutX="55.0" layoutY="277.0" mnemonicParsing="false" onAction="#userLogOut" prefHeight="29.0" prefWidth="103.0" style="-fx-background-color: #201865;" text="Log Out" textFill="#e9e8f4">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="submitReviewButton" layoutX="55.0" layoutY="66.0" mnemonicParsing="false" onAction="#userSubmitReview" prefHeight="187.0" prefWidth="222.0" style="-fx-background-color: #201865;" text="Submit Review" textAlignment="CENTER" textFill="#e9e8f4">
+               <font>
+                  <Font name="Roboto Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="110.0" />
+               </padding></Button>
+            <Button fx:id="seeReviewButton" layoutX="322.0" layoutY="66.0" mnemonicParsing="false" onAction="#userSeeReview" prefHeight="187.0" prefWidth="222.0" style="-fx-background-color: #201865;" text="See Reviews" textFill="#e9e8f4">
+               <font>
+                  <Font name="Roboto Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="110.0" />
+               </padding></Button>
+            <ImageView fitHeight="111.0" fitWidth="138.0" layoutX="114.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/notepad.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="111.0" fitWidth="138.0" layoutX="377.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/glass.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
